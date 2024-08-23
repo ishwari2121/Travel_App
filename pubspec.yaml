@@ -1,0 +1,29 @@
+name: travel_app
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/img/slide-1.jpg
+    - assets/img/9cadc30e58d4f9451dd5020fa982376f.jpg
+    - assets/img/de989087ec5c1b5a1c4d2754f64bfabc.jpg
+    - assets/img/button.jpg
