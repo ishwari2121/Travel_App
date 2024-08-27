@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app/pages/welcome_page.dart';
+import 'package:travel_app/pages/navpages/main_page.dart'; // Import MainPage
+import 'package:travel_app/pages/welcome_page.dart'; // Import WelcomePage (if needed)
 
 // Main entry point of the application.
 void main() {
@@ -15,22 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,  // App theme
       ),
-      home: MyWidget(),  // Set MyWidget as the home screen
+      home: MainPage(),  // Set MainPage as the home screen
     );
-  }
-}
-
-// Define MyWidget as a StatefulWidget
-class MyWidget extends StatefulWidget {
-  const MyWidget({super.key});
-
-  @override
-  State<MyWidget> createState() => _MyWidgetState();
-}
-
-class _MyWidgetState extends State<MyWidget> {
-  @override
-  Widget build(BuildContext context) {
-    return WelcomePage();  // Display WelcomePage widget
   }
 }

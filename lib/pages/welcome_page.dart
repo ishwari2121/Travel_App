@@ -39,25 +39,40 @@ class _WelcomePageState extends State<WelcomePage> {
               Container(
                 margin: const EdgeInsets.only(top: 150, left: 20, right: 20),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         AppLargeText(text: "Trips"),
-                        AppText(text: "Mountain",size: 30,),
-                        SizedBox(height: 20,),
+                        AppText(text: "Mountain", size: 30),
+                        SizedBox(height: 20),
                         Container(
                           width: 250,
                           child: AppText(
-                            text: "Mountain hikes give you an incredible sense of freedom along with endurance test",
-                            size: 14
+                            text:
+                                "Mountain hikes give you an incredible sense of freedom along with endurance test",
+                            size: 14,
                           ),
                         ),
-                        SizedBox(height : 40,),
+                        SizedBox(height: 40),
                         ResponsiveButton()
                         // You can add more widgets here if needed
                       ],
                     ),
+                    Column(
+                      children: List.generate(3, (indexDots) {
+                        return Container(
+                          margin: EdgeInsets.only(bottom: 2),
+                          width: 8,
+                          height: index==indexDots?25:8,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: const Color.fromARGB(255, 1, 1, 1), // Specify a color 
+                          ),
+                        );
+                      }),
+                    )
                   ],
                 ),
               ),
